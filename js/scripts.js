@@ -170,24 +170,16 @@ $(document).ready(function () {
 
 		//create cursor
 		cursorData = new Voxel(rangeXmin, rangeYmin, rangeZmin);
+		//setting default fill for voxel creation
+		cursorData.fill = 'rgb(255,255,255)';
+		//assign class cursor for easy identification
 		$('#voxel0').addClass('cursor');
+		//cache cursor class selector
 		cursor = $('.voxel.cursor');
 
-		console.log(cursorData);
 
 		$('.palette').show();
 
-		//cursor storage object
-
-
-	}
-
-	function cursorAnim () {
-		$('.voxel.cursor figure').animate({
-			backgroundColor: "rgba(26, 151, 240, 1.0)"
-		},1).animate({
-			backgroundColor: "rgba(26, 151, 240, 0.0)"
-		},1000,cursorAnim);
 	}
 
 	//pass specs from user input and initialize environment
@@ -201,7 +193,6 @@ $(document).ready(function () {
   		cubeData.axisLength = voxelRange;
 
 		createEnvironment();
-		cursorAnim();
 
 	});
 
@@ -216,7 +207,6 @@ $(document).ready(function () {
 
 		cursorData.fill = currentColor;
 
-		console.log(currentColor);
 	});
 
 	//render movement
@@ -226,9 +216,9 @@ $(document).ready(function () {
 		});
 	}
 
-	//rotate environment function based off cubeState
+	//rotate environment based off cubeState
 	function rotateCube (cubeState, keyCode) {
-		//var cube = $('.cube');
+		
 		switch (cubeState){
 			case 0:
 				if (keyCode == 69) {
@@ -280,7 +270,6 @@ $(document).ready(function () {
 	}
 
 	function createVoxel () {
-		//new Voxel(cursorData.posX, cursorData.posY, cursorData.posZ, cursorData.fill);
 		if (!(cubeData.map.length == 0)){
 			var voxelExists = false;
 			for (var i = cubeData.map.length; i--;) {
@@ -459,7 +448,6 @@ $(document).ready(function () {
 			//f
 			//place block
 			case 70:
-				//new Voxel(cursorData.posX, cursorData.posY, cursorData.posZ, cursorData.fill);
 				createVoxel();
 				break;
 
