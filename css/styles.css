@@ -1,0 +1,147 @@
+/* panel styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000;
+}
+
+.controlPanel {
+	width: 290px;
+	padding: 10px;
+	border: solid 2px #333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	background: #fff;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+section.controls h2 {
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 11px;
+}
+
+p strong {
+	font-weight: bold;
+	width: 50px;
+	display: inline-block;
+}
+
+a.pop {
+	display: block;
+	text-align: center;
+	border: solid 1px #c1c1c1;
+	background: #333;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 140px;
+	padding: 20px 0;
+}
+
+a.scaffolding-toggle {
+	display: block;
+	text-align: center;
+	border: solid 1px #c1c1c1;
+	background: #333;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	width: 120px;
+	padding: 4px 0;
+}
+
+/* end panel styles */
+
+.wrapper {
+	margin: 80px auto;
+	width: 200px;
+	height: 200px;
+	-webkit-perspective: 1000px;
+	position: relative;
+}
+
+.cube {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	/*-webkit-transform: rotateX(-15deg) rotateY(-35deg) translateZ(-100px);*/
+	-webkit-transition: -webkit-transform 1s;
+}
+
+/* cube rotate animations */
+
+.cube.animateDefault {
+	-webkit-transform: rotateX(-15deg) rotateY(-35deg) translateZ(-100px);
+}
+
+.cube.animate1 {
+	-webkit-transform: rotateX(0deg) rotateY(-96deg) translateZ(-100px);
+}
+
+.cube.animate2 {
+	-webkit-transform: rotateX(0deg) rotateY(-174deg) translateZ(-100px);
+}
+
+.cube.animate3 {
+	-webkit-transform: rotateX(0deg) rotateY(-264deg) translateZ(-100px);
+}
+
+.cube figure {
+	display: block;
+	position: absolute;
+	border: 2px solid #ccc;
+	opacity: 0.5;
+}
+
+.voxel {
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0s;
+}
+
+.voxel figure {
+	display: block;
+	position: absolute;
+	border: none;
+	opacity: 0.5;
+	border: solid 1px #ccc;
+}
+
+.voxel.scaffolding figure {
+	border: solid 2px #ddd;
+}
+
+.palette { display: none; }
+.palette ul li { float: left; display: inline-block; margin-left: 5px; }
+.palette ul li:first-child { margin-left: 0; }
+
+.btnPalette {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: solid 2px #333;
+	cursor: pointer;
+}
+
+.currentColor {
+	border: solid 2px #333;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.btnPalette span { display: none }

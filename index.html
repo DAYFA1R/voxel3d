@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Voxel Art</title>
+	<meta name="description" content="Voxel Art">
+	<meta name="author" content="Daniel Hicks @ NuPlayground">
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div class="controlPanel">
+	<section>
+		<h2>Set the size of your cube</h2>
+		<p>500 is recommended for stable use</p>
+		<input type="text" class="cube-size" name="cube-size" />
+	</section>
+	<section>
+		<h2>Set the amount of voxels in a single axis</h2>
+		<p>10 is recommended for stable use</p>
+		<input type="text" class="voxel-range" name="voxel-range" />
+	</section>
+	<section>
+		<a class="pop">Populate!</a>
+	</section>
+	<section class="controls">
+		<h2>Controls</h2>
+		<p><strong>W</strong> Move forward a block</p>
+		<p><strong>S</strong> Move back a block</p>
+		<p><strong>A</strong> Move left a block</p>
+		<p><strong>D</strong> Move right a block</p>
+		<p><strong>Space</strong> Move up a block</p>
+		<p><strong>V</strong> Move down a block</p>
+		<p><strong>Q</strong> Rotate environment counter-clockwise</p>
+		<p><strong>E</strong> Rotate environment clockwise</p>
+		<br />
+		<p><strong>F</strong> Place block</p>
+	</section>
+	<section class="palette">
+		<h2>Currently selected color:</h2>
+		<div class="currentColor"></div>
+		<h2>Palette</h2>
+		<ul>
+			<li><a class="btnPalette" style="background-color: #000"><span>Black</span></a></li>
+			<li><a class="btnPalette" style="background-color: #fff"><span>White</span></a></li>
+			<li><a class="btnPalette" style="background-color: #ff0000"><span>Red</span></a></li>
+			<li><a class="btnPalette" style="background-color: #00ff00"><span>Green</span></a></li>
+			<li><a class="btnPalette" style="background-color: #0000ff"><span>Blue</span></a></li>
+			<li><a class="btnPalette" style="background-color: #00ffff"><span>Cyan</span></a></li>
+			<li><a class="btnPalette" style="background-color: #ff00ff"><span>Magenta</span></a></li>
+			<li><a class="btnPalette" style="background-color: #3300cc"><span>Purple</span></a></li>
+			<li><a class="btnPalette" style="background-color: #EECEB3"><span>Skin</span></a></li>
+			<li><a class="btnPalette" style="background-color: grey"><span>Grey</span></a></li>
+			<li><a class="btnPalette" style="background-color: #A0522D"><span>Light Grey</span></a></li>
+		</ul>
+	</section>
+</div>
+<div class="wrapper">
+	<div class="cube animateDefault">
+		<figure class="front"></figure>
+		<figure class="back"></figure>
+		<figure class="right"></figure>
+		<figure class="left"></figure>
+		<figure class="top"></figure>
+		<figure class="bottom"></figure>
+	</div>
+</div>
+
+</body>
+</html>
