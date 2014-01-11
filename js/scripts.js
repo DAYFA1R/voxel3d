@@ -313,21 +313,21 @@ $(document).ready(function () {
 			case 87:
 				switch (cubeState) {
 					case 0:
-						cursorData.posZ -= voxelSize;
+						(cursorData.posZ != rangeZmin) ? cursorData.posZ -= voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 					case 1:
-						cursorData.posX -= voxelSize;
+						(cursorData.posX != rangeXmin) ? cursorData.posX -= voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 
 					case 2:
-						cursorData.posZ += voxelSize;
+						(cursorData.posZ != rangeZmax) ? cursorData.posZ += voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 
 					case 3:
-						cursorData.posX += voxelSize;
+						(cursorData.posX != rangeXmax) ? cursorData.posX += voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 				}
@@ -339,21 +339,21 @@ $(document).ready(function () {
 			case 83:
 				switch (cubeState) {
 					case 0:
-						cursorData.posZ += voxelSize;
+						(cursorData.posZ != rangeZmax) ? cursorData.posZ += voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 					case 1:
-						cursorData.posX += voxelSize;
+						(cursorData.posX != rangeXmax) ? cursorData.posX += voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 
 					case 2:
-						cursorData.posZ -= voxelSize;
+						(cursorData.posZ != rangeZmin) ? cursorData.posZ -= voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 
 					case 3:
-						cursorData.posX -= voxelSize;
+						(cursorData.posX != rangeXmin) ? cursorData.posX -= voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 				}
@@ -365,21 +365,21 @@ $(document).ready(function () {
 			case 65:
 				switch (cubeState) {
 					case 0:
-						cursorData.posX -= voxelSize;
+						(cursorData.posX != rangeXmin) ? cursorData.posX -= voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 					case 1:
-						cursorData.posZ += voxelSize;
+						(cursorData.posZ != rangeZmax) ? cursorData.posZ += voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 
 					case 2:
-						cursorData.posX += voxelSize;
+						(cursorData.posX != rangeXmax) ? cursorData.posX += voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 
 					case 3:
-						cursorData.posZ -= voxelSize;
+						(cursorData.posZ != rangeZmin) ? cursorData.posZ -= voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 				}
@@ -391,21 +391,21 @@ $(document).ready(function () {
 			case 68:
 				switch (cubeState) {
 					case 0:
-						cursorData.posX += voxelSize;
+						(cursorData.posX != rangeXmax) ? cursorData.posX += voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 					case 1:
-						cursorData.posZ -= voxelSize;
+						(cursorData.posZ != rangeZmin) ? cursorData.posZ -= voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 
 					case 2:
-						cursorData.posX -= voxelSize;
+						(cursorData.posX != rangeXmin) ? cursorData.posX -= voxelSize : cursorData.posX;
 						renderMovement();
 						break;
 
 					case 3:
-						cursorData.posZ += voxelSize;
+						(cursorData.posZ != rangeZmax) ? cursorData.posZ += voxelSize : cursorData.posZ;
 						renderMovement();
 						break;
 				}
@@ -415,14 +415,14 @@ $(document).ready(function () {
 			//space
 			//up
 			case 32:
-				cursorData.posY -= voxelSize;
+				(cursorData.posY != rangeYmin) ? cursorData.posY -= voxelSize : cursorData.posY;
 				renderMovement();
 				break;
 
 			//v
 			//down
 			case 86:
-				cursorData.posY += voxelSize;
+				(cursorData.posY != rangeYmax) ? cursorData.posY += voxelSize : cursorData.posY;
 				renderMovement();
 				break;
 
