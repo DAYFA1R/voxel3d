@@ -192,7 +192,14 @@ $(document).ready(function () {
 		cubeData.widthByHeight = cubeSize;
   		cubeData.axisLength = voxelRange;
 
-		createEnvironment();
+  		if (!(cubeSize % voxelRange == 0)) {
+  			alert('WARNING: the cube size you specified is not evenly divisible by the axis length you picked. Please increase the cube size, or decrease/increase your axis length to be evenly divisible, and try again.')
+  		} else {
+  			createEnvironment();
+  			$('.controlPanel').addClass('initializeHidden');
+  		}
+
+		
 
 	});
 

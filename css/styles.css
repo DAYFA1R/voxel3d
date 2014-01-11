@@ -15,6 +15,10 @@ body {
 	background: #fff;
 }
 
+.controlPanel.initializeHidden section:nth-child(-n+3) {
+	display: none;
+}
+
 section {
 	margin-bottom: 20px;
 }
